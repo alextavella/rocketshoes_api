@@ -4,9 +4,10 @@ const cors = require('cors');
 
 const routes = require('./routes');
 
+const port = 3000
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/', routes);
 
-app.listen(3000, () => console.log('Listening http://localhost:3000'));
+app.listen(port, () => console.log(`Listening http://localhost:${port}`));
